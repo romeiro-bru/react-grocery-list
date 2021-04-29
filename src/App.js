@@ -1,7 +1,6 @@
 import "./styles.css";
 import { useState } from "react";
 import { Header } from "./Header/Header";
-// import { Button } from "./Button/Button";
 
 const lists = [
   {
@@ -37,38 +36,44 @@ const lists = [
 export default function App() {
   const [grocery, setGrocery] = useState(lists);
 
-  const removeItems = (name) =>
+  const handleRemoveItem = (name) => {
+    console.log("HERE =>", name);
     setGrocery(grocery.filter((el) => el.name !== name));
-
-  const handleClick = (name) => {
-    // console.log("HERE =>", name);
-    removeItems(name);
   };
-  // console.log(grocery);
+  console.log(grocery);
 
-  const groceryCards = (
-    <ul>
-      {grocery.map((item, index) => {
-        return (
-          <li name={item.name} id={index} key={index} className="groceryList">
-            <h1>{item.name}</h1>
-            <ul>
-              <li>{item.item1}</li>
-              <li>{item.item2}</li>
-              <li>{item.item3}</li>
-            </ul>
-            <button onClick={() => handleClick(item.name)}>Got it</button>
-          </li>
-        );
-      })}
-    </ul>
-  );
+  let groceryCards;
+  if (grocery.length !== 0) {
+    groceryCards = (
+      <ul>
+        {grocery.map((item, index) => {
+          return (
+            <li key={index} className="groceryList">
+              <h1>{item.name}</h1>
+              <ul>
+                <li>{item.item1}</li>
+                <li>{item.item2}</li>
+                <li>{item.item3}</li>
+              </ul>
+              <button onClick={() => handleRemoveItem(item.name)}>Check</button>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  } else {
+    return (
+      <>
+        <h1>Don't forget your grocery list!</h1>
+        <button>OK!</button>;
+      </>
+    );
+  }
 
   return (
     <div className="App">
       <Header />
-      {/* <Button /> */}
-      <section className="grocery"> {groceryCards}</section>
+      <section className="grocery">{groceryCards}</section>
     </div>
   );
 }

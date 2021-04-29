@@ -28,7 +28,7 @@ body {
   margin: 0 0 1.5px -15px;
 }
 
-.groceryList button {
+button {
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1.1em;
