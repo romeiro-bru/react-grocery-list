@@ -11,6 +11,6 @@
 ## Technologies :mag_right:
 * React :sparkles:
 * Css :nail_care:
-* 
+
 #
 Inspired by: "Relish Reminder" of [@graceaveris](https://github.com/graceaveris)
