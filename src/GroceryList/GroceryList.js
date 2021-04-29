@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import gcry from "./grocery.svg";
 import "./style.css";
-import groceryimg from "./grocery.svg";
 
 const lists = [
   {
@@ -54,9 +54,8 @@ export function GroceryList() {
   };
   // console.log(grocery);
 
-  let groceryCards;
   if (grocery.length !== 0) {
-    groceryCards = (
+    return (
       <ul>
         {grocery.map((item, index) => {
           return (
@@ -78,16 +77,10 @@ export function GroceryList() {
       <div className="listReminder">
         <h1>
           Don't forget your grocery list!
-          <img src={groceryimg} alt="grocery" />
+          <img src={gcry} alt="grocery" />
         </h1>
         <button onClick={handleClick}>OK!</button>;
       </div>
     );
   }
-
-  return (
-    <>
-      <section className="grocery">{groceryCards}</section>
-    </>
-  );
 }
