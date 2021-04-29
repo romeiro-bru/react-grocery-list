@@ -1,0 +1,39 @@
+body {
+  background: #0f0a19;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.groceryList {
+  padding: 0.2rem 1.5rem;
+  min-width: 7.2rem;
+  border: 2px solid #f1c95c;
+  font-weight: bold;
+  margin: 2rem;
+  border-radius: 8px;
+  color: #f1c95c;
+  list-style: none;
+  display: inline-block;
+}
+
+.groceryList h1 {
+  font-size: 1.2rem;
+}
+.groceryList li {
+  text-align: left;
+  list-style: none;
+  margin-left: -10px;
+}
+
+.groceryList button {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.1em;
+  margin-bottom: 8px;
+  background: #81b0f1;
+  color: #0f0a19;
+  font-weight: bold;
+}
