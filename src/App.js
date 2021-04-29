@@ -4,32 +4,40 @@ import { Header } from "./Header/Header";
 
 const lists = [
   {
-    id: 1,
     name: "Condiments",
     item1: "salt",
     item2: "pepper",
     item3: "mustard"
   },
   {
-    id: 2,
     name: "Grains",
     item1: "rice",
     item2: "oatmeal",
     item3: "granola"
   },
   {
-    id: 3,
     name: "Fruits",
     item1: "papaya",
     item2: "banana",
     item3: "lemon"
   },
   {
-    id: 4,
+    name: "Vegetables",
+    item1: "zuccini",
+    item2: "mushroom",
+    item3: "pumpkin"
+  },
+  {
     name: "Household",
     item1: "bleach",
     item2: "alcohol",
     item3: "sponge"
+  },
+  {
+    name: "Beverages",
+    item1: "coffee",
+    item2: "apple juice",
+    item3: "spring water"
   }
 ];
 
@@ -66,10 +74,10 @@ export default function App() {
     );
   } else {
     return (
-      <>
+      <div>
         <h1>Don't forget your grocery list!</h1>
-        <button onClick={handleClick}>OK!</button>;
-      </>
+        <button onClick={handleClick}>OK!</button>
+      </div>
     );
   }
 
