@@ -4,8 +4,13 @@
 <img  src="https://media.giphy.com/media/l0G16KpPfcmdN1G1O/giphy.gif"  height="250" alt="list">
 </p>
 
+## Features :unicorn: 
+* Check the items in the list
+* When the list is over, remember the items again
 
 ## Technologies :mag_right:
 * React :sparkles:
 * Css :nail_care:
-
+* 
+#
+Inspired by: "Relish Reminder" of [@graceaveris](https://github.com/graceaveris)
