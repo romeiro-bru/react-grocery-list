@@ -37,10 +37,13 @@ export default function App() {
   const [grocery, setGrocery] = useState(lists);
 
   const handleRemoveItem = (name) => {
-    console.log("HERE =>", name);
     setGrocery(grocery.filter((el) => el.name !== name));
+    // console.log("HERE =>", name);
   };
-  console.log(grocery);
+  const handleClick = () => {
+    setGrocery(lists);
+  };
+  // console.log(grocery);
 
   let groceryCards;
   if (grocery.length !== 0) {
@@ -65,7 +68,7 @@ export default function App() {
     return (
       <>
         <h1>Don't forget your grocery list!</h1>
-        <button>OK!</button>;
+        <button onClick={handleClick}>OK!</button>;
       </>
     );
   }
