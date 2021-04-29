@@ -6,34 +6,3 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
-
-.groceryList {
-  padding: 0.2rem 1.2rem;
-  min-width: 7rem;
-  border: 2px solid #f1c95c;
-  font-weight: bold;
-  margin: 1.6rem;
-  border-radius: 8px;
-  color: #f1c95c;
-  list-style: none;
-  display: inline-block;
-}
-
-.groceryList h1 {
-  font-size: 1.2rem;
-}
-.groceryList li {
-  text-align: left;
-  list-style: none;
-  margin: 0 0 1.5px -15px;
-}
-
-button {
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1.1em;
-  margin: 8px;
-  background: #81b0f1;
-  color: #0f0a19;
-  font-weight: bold;
-}
