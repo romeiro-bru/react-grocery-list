@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Header } from "./Header/Header";
 // import { Button } from "./Button/Button";
 
@@ -37,16 +37,14 @@ const lists = [
 export default function App() {
   const [grocery, setGrocery] = useState(lists);
 
-  // useEffect(() => setGrocery(lists), []);
-
-  console.log(grocery);
-
-  const removeItems = (name) => grocery.filter((el) => el.name !== name);
+  const removeItems = (name) =>
+    setGrocery(grocery.filter((el) => el.name !== name));
 
   const handleClick = (name) => {
-    console.log("HERE =>", name);
+    // console.log("HERE =>", name);
     removeItems(name);
   };
+  // console.log(grocery);
 
   const groceryCards = (
     <ul>
@@ -59,7 +57,7 @@ export default function App() {
               <li>{item.item2}</li>
               <li>{item.item3}</li>
             </ul>
-            <button onClick={handleClick(item.name)}>Got it</button>
+            <button onClick={() => handleClick(item.name)}>Got it</button>
           </li>
         );
       })}
