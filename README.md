@@ -13,4 +13,4 @@
 * Css :nail_care:
 
 #
-Inspired by: ["Relish Reminder"](https://github.com/graceaveris/React.js_relish_reminder) of [@graceaveris](https://github.com/graceaveris)
+Inspired by: ["Relish Reminder"](https://github.com/graceaveris/React.js_relish_reminder)
