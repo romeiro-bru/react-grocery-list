@@ -45,9 +45,9 @@ const lists = [
 export function GroceryList() {
   const [grocery, setGrocery] = useState(lists);
 
-  const handleRemoveItem = (name) => {
-    setGrocery(grocery.filter((el) => el.name !== name));
-    // console.log("HERE =>", name);
+  const handleRemoveItem = (value) => {
+    setGrocery(grocery.filter((el) => el.name !== value));
+    // console.log("HERE =>", value);
   };
   const handleClick = () => {
     setGrocery(lists);
@@ -79,7 +79,7 @@ export function GroceryList() {
           Don't forget your grocery list!
           <img src={gcry} alt="grocery" />
         </h1>
-        <button onClick={handleClick}>OK!</button>;
+        <button onClick={handleClick}>OK!</button>
       </div>
     );
   }
