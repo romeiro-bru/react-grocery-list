@@ -45,8 +45,8 @@ const lists = [
 export function GroceryList() {
   const [grocery, setGrocery] = useState(lists);
 
-  const handleRemoveItem = (value) => {
-    setGrocery(grocery.filter((el) => el.name !== value));
+  const handleRemoveItem = (item) => {
+    setGrocery(grocery.filter((el) => el.name !== item.name));
     // console.log("HERE =>", value);
   };
   const handleClick = () => {
@@ -66,7 +66,7 @@ export function GroceryList() {
                 <li>{item.item2}</li>
                 <li>{item.item3}</li>
               </ul>
-              <button onClick={() => handleRemoveItem(item.name)}>Check</button>
+              <button onClick={() => handleRemoveItem(item)}>Check</button>
             </li>
           );
         })}
